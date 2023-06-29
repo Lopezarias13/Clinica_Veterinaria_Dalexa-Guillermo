@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/29/2023 14:32:58
--- Generated from EDMX file: F:\Ejer3_Dalexa-Guillermo\Clinica_Veterinaria\Clinica_Veterinaria\Datos\ClinicaVeterinaria.edmx
+-- Date Created: 06/29/2023 15:58:21
+-- Generated from EDMX file: C:\Users\Jhearvis\Desktop\Ejer3_Dalexa-Guillermo\Clinica_Veterinaria\Clinica_Veterinaria\Datos\ClinicaVeterinaria.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,11 +17,47 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_UsuarioBitacora]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Bitacoras] DROP CONSTRAINT [FK_UsuarioBitacora];
+GO
+IF OBJECT_ID(N'[dbo].[FK_FamiliaPersona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Personas] DROP CONSTRAINT [FK_FamiliaPersona];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PacientePersona]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Personas] DROP CONSTRAINT [FK_PacientePersona];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VacunaHistorialMedico]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[HistorialMedicoSet] DROP CONSTRAINT [FK_VacunaHistorialMedico];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PacienteHistorialMedico]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[HistorialMedicoSet] DROP CONSTRAINT [FK_PacienteHistorialMedico];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Usuarios]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Usuarios];
+GO
+IF OBJECT_ID(N'[dbo].[Bitacoras]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Bitacoras];
+GO
+IF OBJECT_ID(N'[dbo].[Personas]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Personas];
+GO
+IF OBJECT_ID(N'[dbo].[Familias]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Familias];
+GO
+IF OBJECT_ID(N'[dbo].[Vacunas]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Vacunas];
+GO
+IF OBJECT_ID(N'[dbo].[HistorialMedicoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[HistorialMedicoSet];
+GO
+IF OBJECT_ID(N'[dbo].[Pacientes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Pacientes];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
