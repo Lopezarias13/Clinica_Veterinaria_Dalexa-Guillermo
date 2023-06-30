@@ -23,7 +23,7 @@ namespace Clinica_Veterinaria.Datos
         public virtual DbSet<HistorialMedico> HistorialMedico { get; set; }
         public virtual DbSet<Persona> Persona { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<Paciente> Paciente { get; set; }
+        public virtual DbSet<Paciente> Pacientes { get; set; }
         public virtual DbSet<Vacuna> Vacuna { get; set; }
 
     }
