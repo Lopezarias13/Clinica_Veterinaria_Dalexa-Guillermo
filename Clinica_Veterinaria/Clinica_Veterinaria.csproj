@@ -88,7 +88,13 @@
     <Compile Include="Datos\Vacuna.cs">
       <DependentUpon>ClinicaVeterinaria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\CrudBitacora.cs" />
+    <Compile Include="Negocio\CrudFamilia.cs" />
+    <Compile Include="Negocio\CrudHM.cs" />
     <Compile Include="Negocio\CrudPaciente.cs" />
+    <Compile Include="Negocio\CrudPersona.cs" />
+    <Compile Include="Negocio\CrudUsuario.cs" />
+    <Compile Include="Negocio\CrudVacuna.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
