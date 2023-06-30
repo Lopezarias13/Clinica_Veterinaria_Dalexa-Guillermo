@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="ClinicaVeterinaria.Familia" Width="1.5" PointX="5.875" PointY="2.625" />
         <EntityTypeShape EntityType="ClinicaVeterinaria.Vacuna" Width="1.5" PointX="8.25" PointY="2.75" />
         <EntityTypeShape EntityType="ClinicaVeterinaria.HistorialMedico" Width="1.5" PointX="9.25" PointY="5.625" />
-        <EntityTypeShape EntityType="ClinicaVeterinaria.Paciente" Width="1.5" PointX="2.625" PointY="6.125" />
+        <EntityTypeShape EntityType="ClinicaVeterinaria.Paciente" Width="1.5" PointX="4.125" PointY="6.5" />
         <AssociationConnector Association="ClinicaVeterinaria.UsuarioBitacora" />
         <AssociationConnector Association="ClinicaVeterinaria.FamiliaPersona" />
         <AssociationConnector Association="ClinicaVeterinaria.PacientePersona" />

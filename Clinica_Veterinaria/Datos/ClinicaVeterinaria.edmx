@@ -4,111 +4,111 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ClinicaVeterinaria.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="ClinicaVeterinaria.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
   <EntityContainer Name="ClinicaVeterinariaStoreContainer">
-    <EntitySet Name="Usuarios" EntityType="ClinicaVeterinaria.Store.Usuarios" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Bitacoras" EntityType="ClinicaVeterinaria.Store.Bitacoras" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Personas" EntityType="ClinicaVeterinaria.Store.Personas" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Familias" EntityType="ClinicaVeterinaria.Store.Familias" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Vacunas" EntityType="ClinicaVeterinaria.Store.Vacunas" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="HistorialMedicoSet" EntityType="ClinicaVeterinaria.Store.HistorialMedicoSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Pacientes" EntityType="ClinicaVeterinaria.Store.Pacientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="ClinicaVeterinaria.Store.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bitacoras" EntityType="ClinicaVeterinaria.Store.Bitacoras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personas" EntityType="ClinicaVeterinaria.Store.Personas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Familias" EntityType="ClinicaVeterinaria.Store.Familias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vacunas" EntityType="ClinicaVeterinaria.Store.Vacunas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistorialMedicoSet" EntityType="ClinicaVeterinaria.Store.HistorialMedicoSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pacientes" EntityType="ClinicaVeterinaria.Store.Pacientes" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="UsuarioBitacora" Association="ClinicaVeterinaria.Store.UsuarioBitacora">
-      <End Role="Usuario" EntitySet="Usuarios" />
-      <End Role="Bitacora" EntitySet="Bitacoras" />
+      <End EntitySet="Usuarios" Role="Usuario" />
+      <End EntitySet="Bitacoras" Role="Bitacora" />
     </AssociationSet>
     <AssociationSet Name="FamiliaPersona" Association="ClinicaVeterinaria.Store.FamiliaPersona">
-      <End Role="Familia" EntitySet="Familias" />
-      <End Role="Persona" EntitySet="Personas" />
+      <End EntitySet="Familias" Role="Familia" />
+      <End EntitySet="Personas" Role="Persona" />
     </AssociationSet>
     <AssociationSet Name="PacientePersona" Association="ClinicaVeterinaria.Store.PacientePersona">
-      <End Role="Paciente" EntitySet="Pacientes" />
-      <End Role="Persona" EntitySet="Personas" />
+      <End EntitySet="Pacientes" Role="Paciente" />
+      <End EntitySet="Personas" Role="Persona" />
     </AssociationSet>
     <AssociationSet Name="VacunaHistorialMedico" Association="ClinicaVeterinaria.Store.VacunaHistorialMedico">
-      <End Role="Vacuna" EntitySet="Vacunas" />
-      <End Role="HistorialMedico" EntitySet="HistorialMedicoSet" />
+      <End EntitySet="Vacunas" Role="Vacuna" />
+      <End EntitySet="HistorialMedicoSet" Role="HistorialMedico" />
     </AssociationSet>
     <AssociationSet Name="PacienteHistorialMedico" Association="ClinicaVeterinaria.Store.PacienteHistorialMedico">
-      <End Role="Paciente" EntitySet="Pacientes" />
-      <End Role="HistorialMedico" EntitySet="HistorialMedicoSet" />
+      <End EntitySet="Pacientes" Role="Paciente" />
+      <End EntitySet="HistorialMedicoSet" Role="HistorialMedico" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Usuarios">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="User" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Nombre" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="User" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Password" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Email" Nullable="false" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Bitacoras">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Fecha" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Accion" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Fecha" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Accion" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="UsuarioId" Nullable="false" Type="int" />
   </EntityType>
   <EntityType Name="Personas">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="DNI" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FamiliaId" Type="int" Nullable="false" />
-    <Property Name="PacienteId" Type="int" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Nombre" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="DNI" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="FamiliaId" Nullable="false" Type="int" />
+    <Property Name="PacienteId" Nullable="false" Type="int" />
   </EntityType>
   <EntityType Name="Familias">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Codigo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Apellido1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Property1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Direccion" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Telefono" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Codigo" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Apellido1" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Property1" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Direccion" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Telefono" Nullable="false" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Vacunas">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FechaVacunacion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="FechaVacunacion" Nullable="false" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="HistorialMedicoSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NombreEnfermedad" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FechaEnfermedad" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PacienteId" Type="int" Nullable="false" />
-    <Property Name="VacunaId" Type="int" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="NombreEnfermedad" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="FechaEnfermedad" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="PacienteId" Nullable="false" Type="int" />
+    <Property Name="VacunaId" Nullable="false" Type="int" />
   </EntityType>
   <EntityType Name="Pacientes">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Property1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Codigo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Alias" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Especie" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Raza" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ColorDePelo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FechaNacimiento" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PesoMedio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PesoActual" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Property1" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Codigo" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Alias" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Especie" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Raza" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="ColorDePelo" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="FechaNacimiento" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="PesoMedio" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="PesoActual" Nullable="false" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="UsuarioBitacora">
-    <End Role="Usuario" Type="ClinicaVeterinaria.Store.Usuarios" Multiplicity="1" />
-    <End Role="Bitacora" Type="ClinicaVeterinaria.Store.Bitacoras" Multiplicity="*" />
+    <End Type="ClinicaVeterinaria.Store.Usuarios" Multiplicity="1" Role="Usuario" />
+    <End Type="ClinicaVeterinaria.Store.Bitacoras" Multiplicity="*" Role="Bitacora" />
     <ReferentialConstraint>
       <Principal Role="Usuario">
         <PropertyRef Name="Id" />
@@ -119,8 +119,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FamiliaPersona">
-    <End Role="Familia" Type="ClinicaVeterinaria.Store.Familias" Multiplicity="1" />
-    <End Role="Persona" Type="ClinicaVeterinaria.Store.Personas" Multiplicity="*" />
+    <End Type="ClinicaVeterinaria.Store.Familias" Multiplicity="1" Role="Familia" />
+    <End Type="ClinicaVeterinaria.Store.Personas" Multiplicity="*" Role="Persona" />
     <ReferentialConstraint>
       <Principal Role="Familia">
         <PropertyRef Name="Id" />
@@ -131,8 +131,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="PacientePersona">
-    <End Role="Paciente" Type="ClinicaVeterinaria.Store.Pacientes" Multiplicity="1" />
-    <End Role="Persona" Type="ClinicaVeterinaria.Store.Personas" Multiplicity="*" />
+    <End Type="ClinicaVeterinaria.Store.Pacientes" Multiplicity="1" Role="Paciente" />
+    <End Type="ClinicaVeterinaria.Store.Personas" Multiplicity="*" Role="Persona" />
     <ReferentialConstraint>
       <Principal Role="Paciente">
         <PropertyRef Name="Id" />
@@ -143,8 +143,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VacunaHistorialMedico">
-    <End Role="Vacuna" Type="ClinicaVeterinaria.Store.Vacunas" Multiplicity="1" />
-    <End Role="HistorialMedico" Type="ClinicaVeterinaria.Store.HistorialMedicoSet" Multiplicity="*" />
+    <End Type="ClinicaVeterinaria.Store.Vacunas" Multiplicity="1" Role="Vacuna" />
+    <End Type="ClinicaVeterinaria.Store.HistorialMedicoSet" Multiplicity="*" Role="HistorialMedico" />
     <ReferentialConstraint>
       <Principal Role="Vacuna">
         <PropertyRef Name="Id" />
@@ -155,8 +155,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="PacienteHistorialMedico">
-    <End Role="Paciente" Type="ClinicaVeterinaria.Store.Pacientes" Multiplicity="1" />
-    <End Role="HistorialMedico" Type="ClinicaVeterinaria.Store.HistorialMedicoSet" Multiplicity="*" />
+    <End Type="ClinicaVeterinaria.Store.Pacientes" Multiplicity="1" Role="Paciente" />
+    <End Type="ClinicaVeterinaria.Store.HistorialMedicoSet" Multiplicity="*" Role="HistorialMedico" />
     <ReferentialConstraint>
       <Principal Role="Paciente">
         <PropertyRef Name="Id" />
@@ -346,7 +346,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ClinicaVeterinariaStoreContainer" CdmEntityContainer="ClinicaVeterinariaContainer">
+  <EntityContainerMapping CdmEntityContainer="ClinicaVeterinariaContainer" StorageEntityContainer="ClinicaVeterinariaStoreContainer">
     <EntitySetMapping Name="Usuarios">
       <EntityTypeMapping TypeName="IsTypeOf(ClinicaVeterinaria.Usuario)">
         <MappingFragment StoreEntitySet="Usuarios">
