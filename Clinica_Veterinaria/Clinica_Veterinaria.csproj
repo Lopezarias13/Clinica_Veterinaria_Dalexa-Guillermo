@@ -140,6 +140,7 @@
       <LastGenOutput>ClinicaVeterinaria.cs</LastGenOutput>
       <DependentUpon>ClinicaVeterinaria.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\login.png" />
     <None Include="Resources\clinic.png" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Presentaciones\FormPresentacion.resx">
       <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

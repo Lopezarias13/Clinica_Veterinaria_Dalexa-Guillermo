@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clinica_Veterinaria.Presentaciones
 {
-    public partial class FrmLogin : Form
+    public partial class MenuPrincipal : Form
     {
-        public FrmLogin()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }

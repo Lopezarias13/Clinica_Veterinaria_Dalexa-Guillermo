@@ -16,18 +16,18 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar Persona ingresados en la base de datos
         public static List<Persona> ListarPersona()
         {
-            return db.Persona.ToList();
+            return db.Personas.ToList();
         }   
         //Metodo para agregar un nuevo persona
         public static int AgregarPersona(Persona P)
         {
-            db.Persona.Add(P);
+            db.Personas.Add(P);
             return db.SaveChanges();
         }
         //Metodo para buscar un persona por su id
         public static Persona BuscarPersona(int id)
         {
-            return db.Persona.Find(id);
+            return db.Personas.Find(id);
         }
         //Metodo para editar un persona
         public static int EditarPersona(Persona P)
@@ -39,7 +39,7 @@ namespace Clinica_Veterinaria.Negocio
         public static int EliminarPersona(int id)
         {
             Persona AEliminar = BuscarPersona(id);
-            db.Persona.Remove(AEliminar);
+            db.Personas.Remove(AEliminar);
             return db.SaveChanges();
         }
     }
