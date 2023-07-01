@@ -54,6 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clinica_VeterinariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Clinica_VeterinariaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\Bitacora.cs">
       <DependentUpon>ClinicaVeterinaria.tt</DependentUpon>
     </Compile>
@@ -103,11 +108,23 @@
     <Compile Include="Presentaciones\FormPresentacion.Designer.cs">
       <DependentUpon>FormPresentacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentaciones\FrmLogin.cs">
+    <Compile Include="Presentaciones\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentaciones\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Presentaciones\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\RegistraPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\RegistraPersona.Designer.cs">
+      <DependentUpon>RegistraPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +133,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -123,6 +145,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ClinicaVeterinaria.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Clinica_VeterinariaDataSet.xsc">
+      <DependentUpon>Clinica_VeterinariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Clinica_VeterinariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Clinica_VeterinariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Clinica_VeterinariaDataSet.xss">
+      <DependentUpon>Clinica_VeterinariaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Datos\ClinicaVeterinaria.edmx.diagram">
       <DependentUpon>ClinicaVeterinaria.edmx</DependentUpon>
     </None>
@@ -140,6 +173,10 @@
       <LastGenOutput>ClinicaVeterinaria.cs</LastGenOutput>
       <DependentUpon>ClinicaVeterinaria.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\login.png" />
     <None Include="Resources\clinic.png" />
   </ItemGroup>
@@ -150,8 +187,14 @@
     <EmbeddedResource Include="Presentaciones\FormPresentacion.resx">
       <DependentUpon>FormPresentacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentaciones\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Presentaciones\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\RegistraPersona.resx">
+      <DependentUpon>RegistraPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

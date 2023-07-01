@@ -29,6 +29,11 @@ namespace Clinica_Veterinaria.Negocio
         {
             return db.Personas.Find(id);
         }
+        //Metodo para buscar un persona por su nombre
+        public static Persona BuscarPersonaNombre(string nombre)
+        {
+            return db.Personas.FirstOrDefault(p => p.Nombre == nombre);
+        }
         //Metodo para editar un persona
         public static int EditarPersona(Persona P)
         {

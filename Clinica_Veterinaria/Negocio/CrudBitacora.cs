@@ -16,18 +16,18 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar Bitacora ingresados en la base de datos
         public static List<Bitacora> ListarBitacora()
         {
-            return db.Bitacora.ToList();
+            return db.Bitacoras.ToList();
         }
         //Metodo para agregar un nuevo bitacora
         public static int AgregarBitacora(Bitacora B)
         {
-            db.Bitacora.Add(B);
+            db.Bitacoras.Add(B);
             return db.SaveChanges();
         }
         //Metodo para buscar un bitacora por su id
         public static Bitacora BuscarBitacora(int id)
         {
-            return db.Bitacora.Find(id);
+            return db.Bitacoras.Find(id);
         }
         //Metodo para editar un Bitacora
         public static int EditarBitacora(Bitacora B)
@@ -39,7 +39,7 @@ namespace Clinica_Veterinaria.Negocio
         public static int EliminarBitacora(int id)
         {
             Bitacora AEliminar = BuscarBitacora(id);
-            db.Bitacora.Remove(AEliminar);
+            db.Bitacoras.Remove(AEliminar);
             return db.SaveChanges();
         }
     }

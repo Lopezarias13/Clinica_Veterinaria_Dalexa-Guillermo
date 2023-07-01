@@ -16,18 +16,18 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar Familia ingresados en la base de datos
         public static List<Familia> ListarFamilia()
         {
-            return db.Familia.ToList();
+            return db.Familias.ToList();
         }
         //Metodo para agregar un nuevo familia
         public static int AgregarFamilia(Familia F)
         {
-            db.Familia.Add(F);
+            db.Familias.Add(F);
             return db.SaveChanges();
         }
         //Metodo para buscar un familia por su id
         public static Familia BuscarFamilia(int id)
         {
-            return db.Familia.Find(id);
+            return db.Familias.Find(id);
         }
         //Metodo para editar un familia
         public static int EditarFAMILIA(Familia F)
@@ -39,7 +39,7 @@ namespace Clinica_Veterinaria.Negocio
         public static int EliminarFamilia(int id)
         {
             Familia AEliminar = BuscarFamilia(id);
-            db.Familia.Remove(AEliminar);
+            db.Familias.Remove(AEliminar);
             return db.SaveChanges();
         }
     }

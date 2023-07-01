@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Clinica_Veterinaria.Datos;
+using Clinica_Veterinaria.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,9 +50,126 @@ namespace Clinica_Veterinaria.Presentaciones
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void buttonRegistrar_Click(object sender, EventArgs e)//boton registrar
+        {
+            Persona persona = new Persona();
+            persona.Nombre = nombreTextBox.Text;
+            persona.DNI = dNITextBox.Text;
+            persona.FamiliaId = int.Parse(familiaIdTextBox.Text);
+            persona.PacienteId = int.Parse(pacienteIdTextBox.Text);
+
+            //CrudPersona.AgregarPersona(persona);
+            if(CrudPersona.AgregarPersona(persona) > 0)
+            {
+                MessageBox.Show("Registro agregado correctamente");
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo agregar el registro");
+            }
+        }
+        private void Limpiar()
+        {
+            nombreTextBox.Clear();
+            dNITextBox.Clear();
+            familiaIdTextBox.Clear();
+            pacienteIdTextBox.Clear();
+        }
+        
+
+        private void buttonCancelar_Click(object sender, EventArgs e)//boton cancelar
+        {
+            MessageBox.Show("¿Desea cancelar el registro?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Limpiar();
+            //this.Close();
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)//boton modificar
+        {
+            Persona persona = new Persona();
+            persona.Nombre = nombreTextBox.Text;
+            persona.DNI = dNITextBox.Text;
+            persona.FamiliaId = int.Parse(familiaIdTextBox.Text);
+            persona.PacienteId = int.Parse(pacienteIdTextBox.Text);
+
+            //CrudPersona.AgregarPersona(persona);
+            if (CrudPersona.EditarPersona(persona) > 0)
+            {
+                MessageBox.Show("Registro modificado correctamente");
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo modificar el registro");
+            }
+        }
+       
+
+        private void buttonEliminar_Click(object sender, EventArgs e)//boton eliminar
+        {
+            Persona persona = new Persona();
+            persona.Nombre = nombreTextBox.Text;
+            persona.DNI = dNITextBox.Text;
+            persona.FamiliaId = int.Parse(familiaIdTextBox.Text);
+            persona.PacienteId = int.Parse(pacienteIdTextBox.Text);
+
+            //CrudPersona.AgregarPersona(persona);
+            if (CrudPersona.EliminarPersona(persona.Id) > 0)
+            {
+                MessageBox.Show("Registro eliminado correctamente");
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar el registro");
+            }
+        }
+
+        private void buttonNuevo_Click(object sender, EventArgs e)//boton nuevo
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)//busqueda con radio button id persona y nombre
+        {
+
+        }
+
+        //radio button id persona p
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonIdPersona.Checked == true)
+            {
+                buttonRegistrar.Enabled = false;
+                buttonModificar.Enabled = true;
+                buttonEliminar.Enabled = true;
+            }
+            else
+            {
+                buttonModificar.Enabled = false;
+                buttonEliminar.Enabled = false;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)//radio button nombre
+        {
+            if (radioButtonNombre.Checked == true)
+            {
+                buttonRegistrar.Enabled = false;
+                buttonModificar.Enabled = true;
+                buttonEliminar.Enabled = true;
+            }
+            else
+            {
+                buttonModificar.Enabled = false;
+                buttonEliminar.Enabled = false;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)// imagen 
+        {
+           
         }
     }
 }

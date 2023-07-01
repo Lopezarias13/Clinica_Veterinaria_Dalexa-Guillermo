@@ -16,18 +16,18 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar Pacientes ingresados en la base de datos
         public static List<Usuario> ListarUsuario()
         {
-            return db.Usuario.ToList();
+            return db.Usuarios.ToList();
         }
         //Metodo para agregar un nuevo usuario
         public static int AgregarUsuario(Usuario U)
         {
-            db.Usuario.Add(U);
+            db.Usuarios.Add(U);
             return db.SaveChanges();
         }
         //Metodo para buscar un usuario por su id
         public static Usuario BuscarUsuario(int id)
         {
-            return db.Usuario.Find(id);
+            return db.Usuarios.Find(id);
         }
         //Metodo para editar un usuario
         public static int EditarUsuario(Usuario U)
@@ -39,7 +39,7 @@ namespace Clinica_Veterinaria.Negocio
         public static int EliminarUsuario(int id)
         {
             Usuario AEliminar = BuscarUsuario(id);
-            db.Usuario.Remove(AEliminar);
+            db.Usuarios.Remove(AEliminar);
             return db.SaveChanges();
         }
     }

@@ -44,17 +44,18 @@
             this.pacienteIdTextBox = new System.Windows.Forms.TextBox();
             this.personasTableAdapter = new Clinica_Veterinaria.Clinica_VeterinariaDataSetTableAdapters.PersonasTableAdapter();
             this.tableAdapterManager = new Clinica_Veterinaria.Clinica_VeterinariaDataSetTableAdapters.TableAdapterManager();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonIdPersona = new System.Windows.Forms.RadioButton();
+            this.radioButtonNombre = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonNuevo = new System.Windows.Forms.Button();
-            this.buttonRegistrar = new System.Windows.Forms.Button();
-            this.buttonModificar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonModificar = new System.Windows.Forms.Button();
+            this.buttonRegistrar = new System.Windows.Forms.Button();
+            this.buttonNuevo = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             dNILabel = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinica_VeterinariaDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -125,9 +127,9 @@
             this.groupBox1.Controls.Add(this.familiaIdTextBox);
             this.groupBox1.Controls.Add(pacienteIdLabel);
             this.groupBox1.Controls.Add(this.pacienteIdTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(23, 58);
+            this.groupBox1.Location = new System.Drawing.Point(12, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 310);
+            this.groupBox1.Size = new System.Drawing.Size(318, 310);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Persona";
@@ -198,40 +200,53 @@
             this.tableAdapterManager.UsuariosTableAdapter = null;
             this.tableAdapterManager.VacunasTableAdapter = null;
             // 
-            // radioButton1
+            // radioButtonIdPersona
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(5, 27);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Id Persona";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButtonIdPersona.AutoSize = true;
+            this.radioButtonIdPersona.Location = new System.Drawing.Point(5, 27);
+            this.radioButtonIdPersona.Name = "radioButtonIdPersona";
+            this.radioButtonIdPersona.Size = new System.Drawing.Size(76, 17);
+            this.radioButtonIdPersona.TabIndex = 1;
+            this.radioButtonIdPersona.TabStop = true;
+            this.radioButtonIdPersona.Text = "Id Persona";
+            this.radioButtonIdPersona.UseVisualStyleBackColor = true;
+            this.radioButtonIdPersona.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonNombre
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(113, 27);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(62, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nombre";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonNombre.AutoSize = true;
+            this.radioButtonNombre.Location = new System.Drawing.Point(113, 27);
+            this.radioButtonNombre.Name = "radioButtonNombre";
+            this.radioButtonNombre.Size = new System.Drawing.Size(62, 17);
+            this.radioButtonNombre.TabIndex = 2;
+            this.radioButtonNombre.TabStop = true;
+            this.radioButtonNombre.Text = "Nombre";
+            this.radioButtonNombre.UseVisualStyleBackColor = true;
+            this.radioButtonNombre.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.radioButtonNombre);
+            this.groupBox2.Controls.Add(this.radioButtonIdPersona);
             this.groupBox2.Location = new System.Drawing.Point(363, 64);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(484, 63);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Clinica_Veterinaria.Properties.Resources.search1;
+            this.pictureBox1.Location = new System.Drawing.Point(348, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // textBox1
             // 
@@ -240,6 +255,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(118, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -262,62 +278,68 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             // 
-            // buttonNuevo
+            // buttonEliminar
             // 
-            this.buttonNuevo.Location = new System.Drawing.Point(6, 19);
-            this.buttonNuevo.Name = "buttonNuevo";
-            this.buttonNuevo.Size = new System.Drawing.Size(75, 23);
-            this.buttonNuevo.TabIndex = 0;
-            this.buttonNuevo.Text = "Nuevo";
-            this.buttonNuevo.UseVisualStyleBackColor = true;
-            // 
-            // buttonRegistrar
-            // 
-            this.buttonRegistrar.Location = new System.Drawing.Point(113, 19);
-            this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.buttonRegistrar.TabIndex = 1;
-            this.buttonRegistrar.Text = "Registrar";
-            this.buttonRegistrar.UseVisualStyleBackColor = true;
-            // 
-            // buttonModificar
-            // 
-            this.buttonModificar.Location = new System.Drawing.Point(213, 19);
-            this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(75, 23);
-            this.buttonModificar.TabIndex = 2;
-            this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Location = new System.Drawing.Point(307, 19);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 26);
+            this.buttonEliminar.TabIndex = 4;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Location = new System.Drawing.Point(403, 19);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 26);
             this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // buttonEliminar
+            // buttonModificar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(307, 19);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEliminar.TabIndex = 4;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Location = new System.Drawing.Point(213, 19);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(75, 26);
+            this.buttonModificar.TabIndex = 2;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
+            // 
+            // buttonRegistrar
+            // 
+            this.buttonRegistrar.Location = new System.Drawing.Point(113, 19);
+            this.buttonRegistrar.Name = "buttonRegistrar";
+            this.buttonRegistrar.Size = new System.Drawing.Size(75, 26);
+            this.buttonRegistrar.TabIndex = 1;
+            this.buttonRegistrar.Text = "Registrar";
+            this.buttonRegistrar.UseVisualStyleBackColor = true;
+            this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click);
+            // 
+            // buttonNuevo
+            // 
+            this.buttonNuevo.Location = new System.Drawing.Point(6, 19);
+            this.buttonNuevo.Name = "buttonNuevo";
+            this.buttonNuevo.Size = new System.Drawing.Size(75, 26);
+            this.buttonNuevo.TabIndex = 0;
+            this.buttonNuevo.Text = "Nuevo";
+            this.buttonNuevo.UseVisualStyleBackColor = true;
+            this.buttonNuevo.Click += new System.EventHandler(this.buttonNuevo_Click);
             // 
             // RegistraPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(859, 496);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "RegistraPersona";
-            this.Text = "g";
+            this.Text = "Registro Persona";
             this.Load += new System.EventHandler(this.RegistraPersona_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -325,6 +347,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.clinica_VeterinariaDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -343,8 +366,8 @@
         private System.Windows.Forms.TextBox dNITextBox;
         private System.Windows.Forms.TextBox familiaIdTextBox;
         private System.Windows.Forms.TextBox pacienteIdTextBox;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonIdPersona;
+        private System.Windows.Forms.RadioButton radioButtonNombre;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -354,5 +377,6 @@
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonRegistrar;
         private System.Windows.Forms.Button buttonNuevo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

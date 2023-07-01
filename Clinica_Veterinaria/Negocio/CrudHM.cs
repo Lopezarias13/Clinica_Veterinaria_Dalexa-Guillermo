@@ -16,18 +16,18 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar HM ingresados en la base de datos
         public static List<HistorialMedico> ListarPacientes()
         {
-            return db.HistorialMedico.ToList();
+            return db.HistorialMedicoSet.ToList();
         }
         //Metodo para agregar un nuevo HM
         public static int AgregarHM(HistorialMedico hm)
         {
-            db.HistorialMedico.Add(hm);
+            db.HistorialMedicoSet.Add(hm);
             return db.SaveChanges();
         }
         //Metodo para buscar un hm por su id
         public static HistorialMedico BuscarHM(int id)
         {
-            return db.HistorialMedico.Find(id);
+            return db.HistorialMedicoSet.Find(id);
         }
         //Metodo para editar un Historial Medico
         public static int EditarHM(HistorialMedico hm)
@@ -39,7 +39,7 @@ namespace Clinica_Veterinaria.Negocio
         public static int EliminarHM(int id)
         {
             HistorialMedico AEliminar = BuscarHM(id);
-            db.HistorialMedico.Remove(AEliminar);
+            db.HistorialMedicoSet.Remove(AEliminar);
             return db.SaveChanges();
         }
     }

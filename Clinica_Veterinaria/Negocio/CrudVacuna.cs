@@ -16,18 +16,18 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar Vacuna ingresados en la base de datos
         public static List<Vacuna> ListarVacuna()
         {
-            return db.Vacuna.ToList();
+            return db.Vacunas.ToList();
         }
         //Metodo para agregar un nuevo vacuna
         public static int AgregarVacuna(Vacuna V)
         {
-            db.Vacuna.Add(V);
+            db.Vacunas.Add(V);
             return db.SaveChanges();
         }
         //Metodo para buscar un VACUNA por su id
         public static Vacuna BuscarVacuna(int id)
         {
-            return db.Vacuna.Find(id);
+            return db.Vacunas.Find(id);
         }
         //Metodo para editar un vacuna
         public static int EditarVacuna(Vacuna V)
@@ -39,7 +39,7 @@ namespace Clinica_Veterinaria.Negocio
         public static int EliminarvACUNA(int id)
         {
             Vacuna AEliminar = BuscarVacuna(id);
-            db.Vacuna.Remove(AEliminar);
+            db.Vacunas.Remove(AEliminar);
             return db.SaveChanges();
         }
     }
