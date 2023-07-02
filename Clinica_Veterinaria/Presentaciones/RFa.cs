@@ -34,11 +34,11 @@ namespace Clinica_Veterinaria.Presentaciones
             F.Telefono = telefonoTextBox.Text;
             if(CrudFamilia.AgregarFamilia(F) > 0)
             {
-                MessageBox.Show("Familia Agregada con Exito");
+                MessageBox.Show("Familia Registrada con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("No se pudo guardar la Familia");
+                MessageBox.Show("No se pudo guardar la Familia", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void Limpiar()// Metodo Limpiar

@@ -49,6 +49,12 @@
             this.buttonNuevo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButtonNombre = new System.Windows.Forms.RadioButton();
+            this.radioButtonIdPersona = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
@@ -58,6 +64,8 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -246,7 +254,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(417, 34);
+            this.groupBox2.Location = new System.Drawing.Point(415, 110);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(414, 334);
             this.groupBox2.TabIndex = 29;
@@ -261,11 +269,77 @@
             this.dataGridView1.Size = new System.Drawing.Size(366, 244);
             this.dataGridView1.TabIndex = 0;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.radioButtonNombre);
+            this.groupBox3.Controls.Add(this.radioButtonIdPersona);
+            this.groupBox3.Location = new System.Drawing.Point(415, 37);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(429, 63);
+            this.groupBox3.TabIndex = 30;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Buscar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Clinica_Veterinaria.Properties.Resources.search1;
+            this.pictureBox1.Location = new System.Drawing.Point(337, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(192, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(118, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // radioButtonNombre
+            // 
+            this.radioButtonNombre.AutoSize = true;
+            this.radioButtonNombre.Location = new System.Drawing.Point(113, 27);
+            this.radioButtonNombre.Name = "radioButtonNombre";
+            this.radioButtonNombre.Size = new System.Drawing.Size(62, 17);
+            this.radioButtonNombre.TabIndex = 2;
+            this.radioButtonNombre.TabStop = true;
+            this.radioButtonNombre.Text = "Apellido";
+            this.radioButtonNombre.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonIdPersona
+            // 
+            this.radioButtonIdPersona.AutoSize = true;
+            this.radioButtonIdPersona.Location = new System.Drawing.Point(5, 27);
+            this.radioButtonIdPersona.Name = "radioButtonIdPersona";
+            this.radioButtonIdPersona.Size = new System.Drawing.Size(69, 17);
+            this.radioButtonIdPersona.TabIndex = 1;
+            this.radioButtonIdPersona.TabStop = true;
+            this.radioButtonIdPersona.Text = "Id Familia";
+            this.radioButtonIdPersona.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Clinica_Veterinaria.Properties.Resources.search;
+            this.button2.Location = new System.Drawing.Point(337, -24);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 43);
+            this.button2.TabIndex = 31;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // RFa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 450);
+            this.ClientSize = new System.Drawing.Size(856, 470);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "RFa";
@@ -275,6 +349,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +373,11 @@
         private System.Windows.Forms.Button buttonNuevo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton radioButtonNombre;
+        private System.Windows.Forms.RadioButton radioButtonIdPersona;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
