@@ -10,6 +10,7 @@ namespace Clinica_Veterinaria.Negocio
 {
     internal class CrudPaciente
     {
+        //CrudPaciente.cs
         //Intacia de la base de datos
         public static ClinicaVeterinariaContainer db = new ClinicaVeterinariaContainer();
 
@@ -19,7 +20,7 @@ namespace Clinica_Veterinaria.Negocio
             return db.Pacientes.ToList();
         }
         //Metodo para agregar un nuevo paciente
-        public static int AgregarPaciente(Paciente P)
+        public static int AgregarPaciente(Paciente P)// Crear un nuevo paciente
         {
             db.Pacientes.Add(P);
             return db.SaveChanges();

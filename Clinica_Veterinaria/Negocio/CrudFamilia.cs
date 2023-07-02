@@ -16,14 +16,15 @@ namespace Clinica_Veterinaria.Negocio
         //Metodo Listar Familia ingresados en la base de datos
         public static List<Familia> ListarFamilia()
         {
-            return db.Familias.ToList();
+            return db.Familias.ToList();  
         }
         //Metodo para agregar un nuevo familia
-        public static int AgregarFamilia(Familia F)
+        public static int AgregarFamilia(Familia F) 
         {
             db.Familias.Add(F);
             return db.SaveChanges();
         }
+       
         //Metodo para buscar un familia por su id
         public static Familia BuscarFamilia(int id)
         {

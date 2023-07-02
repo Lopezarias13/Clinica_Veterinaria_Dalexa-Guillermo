@@ -171,5 +171,75 @@ namespace Clinica_Veterinaria.Presentaciones
         {
            
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void idLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dNILabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dNITextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void familiaIdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void familiaIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pacienteIdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pacienteIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

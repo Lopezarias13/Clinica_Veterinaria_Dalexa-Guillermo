@@ -78,6 +78,7 @@
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 0;
             idLabel.Text = "Id:";
+            idLabel.Click += new System.EventHandler(this.idLabel_Click);
             // 
             // nombreLabel
             // 
@@ -87,6 +88,7 @@
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 2;
             nombreLabel.Text = "Nombre:";
+            nombreLabel.Click += new System.EventHandler(this.nombreLabel_Click);
             // 
             // dNILabel
             // 
@@ -96,6 +98,7 @@
             dNILabel.Size = new System.Drawing.Size(29, 13);
             dNILabel.TabIndex = 4;
             dNILabel.Text = "DNI:";
+            dNILabel.Click += new System.EventHandler(this.dNILabel_Click);
             // 
             // familiaIdLabel
             // 
@@ -105,6 +108,7 @@
             familiaIdLabel.Size = new System.Drawing.Size(54, 13);
             familiaIdLabel.TabIndex = 6;
             familiaIdLabel.Text = "Familia Id:";
+            familiaIdLabel.Click += new System.EventHandler(this.familiaIdLabel_Click);
             // 
             // pacienteIdLabel
             // 
@@ -114,6 +118,7 @@
             pacienteIdLabel.Size = new System.Drawing.Size(64, 13);
             pacienteIdLabel.TabIndex = 8;
             pacienteIdLabel.Text = "Paciente Id:";
+            pacienteIdLabel.Click += new System.EventHandler(this.pacienteIdLabel_Click);
             // 
             // groupBox1
             // 
@@ -133,6 +138,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Persona";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // idTextBox
             // 
@@ -141,6 +147,7 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(188, 20);
             this.idTextBox.TabIndex = 1;
+            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // personasBindingSource
             // 
@@ -159,6 +166,7 @@
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(188, 20);
             this.nombreTextBox.TabIndex = 3;
+            this.nombreTextBox.TextChanged += new System.EventHandler(this.nombreTextBox_TextChanged);
             // 
             // dNITextBox
             // 
@@ -167,6 +175,7 @@
             this.dNITextBox.Name = "dNITextBox";
             this.dNITextBox.Size = new System.Drawing.Size(188, 20);
             this.dNITextBox.TabIndex = 5;
+            this.dNITextBox.TextChanged += new System.EventHandler(this.dNITextBox_TextChanged);
             // 
             // familiaIdTextBox
             // 
@@ -175,6 +184,7 @@
             this.familiaIdTextBox.Name = "familiaIdTextBox";
             this.familiaIdTextBox.Size = new System.Drawing.Size(188, 20);
             this.familiaIdTextBox.TabIndex = 7;
+            this.familiaIdTextBox.TextChanged += new System.EventHandler(this.familiaIdTextBox_TextChanged);
             // 
             // pacienteIdTextBox
             // 
@@ -183,6 +193,7 @@
             this.pacienteIdTextBox.Name = "pacienteIdTextBox";
             this.pacienteIdTextBox.Size = new System.Drawing.Size(188, 20);
             this.pacienteIdTextBox.TabIndex = 9;
+            this.pacienteIdTextBox.TextChanged += new System.EventHandler(this.pacienteIdTextBox_TextChanged);
             // 
             // personasTableAdapter
             // 
@@ -236,6 +247,7 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // pictureBox1
             // 
@@ -264,6 +276,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(484, 234);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox3
             // 
@@ -277,6 +290,7 @@
             this.groupBox3.Size = new System.Drawing.Size(484, 63);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // buttonEliminar
             // 
