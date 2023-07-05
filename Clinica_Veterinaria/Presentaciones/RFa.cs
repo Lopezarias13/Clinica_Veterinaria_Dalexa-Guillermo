@@ -19,37 +19,63 @@ namespace Clinica_Veterinaria.Presentaciones
             InitializeComponent();
         }
 
-        private void buttonRegistrar_Click(object sender, EventArgs e)// Boton Guardar y Agregar
+        private void buttonRegistrar_Click(object sender, EventArgs e)// Boton Registrar Familia Guardar
         {
-            AgregarFamilia();
-            Limpiar();
+            if (CamposVacios())
+            {
+                MessageBox.Show("Debes completar todos los campos", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                AgregarFamilia();
+                Limpiar();
+            }
         }
-        private void AgregarFamilia()// Metodo Agregar
+
+        private bool CamposVacios()// Metodo para validar campos vacios para el registro de una nueva familia
         {
+            return string.IsNullOrWhiteSpace(codigoTextBox.Text) ||
+                   string.IsNullOrWhiteSpace(apellido1TextBox.Text) ||
+                   string.IsNullOrWhiteSpace(property1TextBox.Text) ||
+                   string.IsNullOrWhiteSpace(direccionTextBox.Text) ||
+                   string.IsNullOrWhiteSpace(telefonoTextBox.Text);
+        }
+
+        private void AgregarFamilia()
+        {
+            if (CamposVacios())
+            {
+                // No se guardará la información si los campos están vacíos
+                return;
+            }
+
             Familia F = new Familia();
             F.Codigo = codigoTextBox.Text;
             F.Apellido1 = apellido1TextBox.Text;
             F.Property1 = property1TextBox.Text;
             F.Direccion = direccionTextBox.Text;
             F.Telefono = telefonoTextBox.Text;
-            if(CrudFamilia.AgregarFamilia(F) > 0)
+
+            if (CrudFamilia.AgregarFamilia(F) > 0)
             {
-                MessageBox.Show("Familia Registrada con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Familia Registrada con Éxito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("No se pudo guardar la Familia", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        private void Limpiar()// Metodo Limpiar
+
+        private void Limpiar()
         {
-            idTextBox.Clear();
+            //idTextBox.Clear();
             codigoTextBox.Clear();
             apellido1TextBox.Clear();
             property1TextBox.Clear();
             direccionTextBox.Clear();
             telefonoTextBox.Clear();
         }
+
 
         private void buttonCancelar_Click(object sender, EventArgs e)// Boton Cancelar
         {
@@ -67,12 +93,7 @@ namespace Clinica_Veterinaria.Presentaciones
         }
         private void RFa_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = CrudFamilia.ListarFamilia();
-        }
-
-        private void buttonEliminar_Click(object sender, EventArgs e)// Boton Eliminar
-        {
-           
+            //dataGridView1.DataSource = CrudFamilia.ListarFamilia();
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)// Boton Modificar
@@ -82,7 +103,15 @@ namespace Clinica_Veterinaria.Presentaciones
 
         private void buttonNuevo_Click(object sender, EventArgs e)// Boton Nuevo
         {
+            Limpiar();
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void buttonEliminar_Click(object sender, EventArgs e)// Boton Eliminar
+        {
         }
     }
 }

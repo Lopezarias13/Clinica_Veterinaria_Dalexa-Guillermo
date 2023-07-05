@@ -37,7 +37,7 @@ namespace Clinica_Veterinaria.Negocio
             return db.SaveChanges();
         }
         //Metodo para eliminar un familia
-        public static int EliminarFamilia(int id)
+        public static int EliminarFamilia(int id)// Metodo para eliminar un familia 
         {
             Familia AEliminar = BuscarFamilia(id);
             db.Familias.Remove(AEliminar);
