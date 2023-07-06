@@ -14,7 +14,7 @@ namespace Clinica_Veterinaria.Negocio
         public static ClinicaVeterinariaContainer db = new ClinicaVeterinariaContainer();
 
         //Metodo Listar Familia ingresados en la base de datos
-        public static List<Familia> ListarFamilia()
+        public static List<Familia> ListarFamilia()//
         {
             return db.Familias.ToList();  
         }
