@@ -104,6 +104,25 @@ namespace Clinica_Veterinaria.Presentaciones
         {
 
         }
+        private void codigoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telefonoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void property1Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void property1TextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         private void buttonEliminar_Click(object sender, EventArgs e)// Boton Eliminar
         {
             // Obtener el ID de la fila seleccionada en el DataGridView
@@ -221,26 +240,6 @@ namespace Clinica_Veterinaria.Presentaciones
                     MessageBox.Show("Por favor, ingresa un valor numérico válido para el ID de la Familia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void codigoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefonoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void property1Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void property1TextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

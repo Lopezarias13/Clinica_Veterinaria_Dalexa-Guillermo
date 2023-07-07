@@ -48,10 +48,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButtonIdPersona = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             telefonoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -61,18 +60,17 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
-            telefonoLabel.Location = new System.Drawing.Point(21, 223);
+            telefonoLabel.Location = new System.Drawing.Point(21, 237);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(78, 20);
             telefonoLabel.TabIndex = 22;
-            telefonoLabel.Text = "Telefono:";
+            telefonoLabel.Text = "Teléfono:";
             telefonoLabel.Click += new System.EventHandler(this.telefonoLabel_Click);
             // 
             // codigoLabel
@@ -83,24 +81,24 @@
             codigoLabel.Name = "codigoLabel";
             codigoLabel.Size = new System.Drawing.Size(67, 20);
             codigoLabel.TabIndex = 14;
-            codigoLabel.Text = "Codigo:";
+            codigoLabel.Text = "Código:";
             codigoLabel.Click += new System.EventHandler(this.codigoLabel_Click);
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
-            direccionLabel.Location = new System.Drawing.Point(21, 176);
+            direccionLabel.Location = new System.Drawing.Point(21, 190);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(82, 20);
             direccionLabel.TabIndex = 20;
-            direccionLabel.Text = "Direccion:";
+            direccionLabel.Text = "Dirección:";
             // 
             // apellido1Label
             // 
             apellido1Label.AutoSize = true;
             apellido1Label.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
-            apellido1Label.Location = new System.Drawing.Point(21, 84);
+            apellido1Label.Location = new System.Drawing.Point(21, 96);
             apellido1Label.Name = "apellido1Label";
             apellido1Label.Size = new System.Drawing.Size(84, 20);
             apellido1Label.TabIndex = 16;
@@ -110,7 +108,7 @@
             // 
             property1Label.AutoSize = true;
             property1Label.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
-            property1Label.Location = new System.Drawing.Point(21, 129);
+            property1Label.Location = new System.Drawing.Point(21, 144);
             property1Label.Name = "property1Label";
             property1Label.Size = new System.Drawing.Size(86, 20);
             property1Label.TabIndex = 18;
@@ -119,6 +117,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.buttonEliminar);
             this.groupBox1.Controls.Add(this.buttonCancelar);
@@ -211,14 +210,14 @@
             // 
             // telefonoTextBox
             // 
-            this.telefonoTextBox.Location = new System.Drawing.Point(154, 224);
+            this.telefonoTextBox.Location = new System.Drawing.Point(154, 238);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(216, 27);
             this.telefonoTextBox.TabIndex = 23;
             // 
             // direccionTextBox
             // 
-            this.direccionTextBox.Location = new System.Drawing.Point(154, 177);
+            this.direccionTextBox.Location = new System.Drawing.Point(154, 191);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(216, 27);
             this.direccionTextBox.TabIndex = 21;
@@ -232,7 +231,7 @@
             // 
             // property1TextBox
             // 
-            this.property1TextBox.Location = new System.Drawing.Point(154, 130);
+            this.property1TextBox.Location = new System.Drawing.Point(154, 145);
             this.property1TextBox.Name = "property1TextBox";
             this.property1TextBox.Size = new System.Drawing.Size(216, 27);
             this.property1TextBox.TabIndex = 19;
@@ -240,13 +239,14 @@
             // 
             // apellido1TextBox
             // 
-            this.apellido1TextBox.Location = new System.Drawing.Point(154, 85);
+            this.apellido1TextBox.Location = new System.Drawing.Point(154, 97);
             this.apellido1TextBox.Name = "apellido1TextBox";
             this.apellido1TextBox.Size = new System.Drawing.Size(216, 27);
             this.apellido1TextBox.TabIndex = 17;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.groupBox2.Location = new System.Drawing.Point(484, 110);
@@ -254,7 +254,7 @@
             this.groupBox2.Size = new System.Drawing.Size(776, 334);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lista Familiar";
+            this.groupBox2.Text = "Lista Familias";
             // 
             // dataGridView1
             // 
@@ -267,8 +267,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.LightGray;
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.radioButtonIdPersona);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
@@ -279,32 +279,9 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscar";
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Clinica_Veterinaria.Properties.Resources.search;
-            this.button2.Location = new System.Drawing.Point(627, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 37);
-            this.button2.TabIndex = 31;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Clinica_Veterinaria.Properties.Resources.search1;
-            this.pictureBox1.Location = new System.Drawing.Point(530, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 27);
+            this.textBox1.Location = new System.Drawing.Point(285, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(279, 27);
             this.textBox1.TabIndex = 3;
@@ -314,7 +291,7 @@
             // 
             this.radioButtonIdPersona.AutoSize = true;
             this.radioButtonIdPersona.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonIdPersona.Location = new System.Drawing.Point(87, 27);
+            this.radioButtonIdPersona.Location = new System.Drawing.Point(160, 29);
             this.radioButtonIdPersona.Name = "radioButtonIdPersona";
             this.radioButtonIdPersona.Size = new System.Drawing.Size(95, 24);
             this.radioButtonIdPersona.TabIndex = 1;
@@ -323,16 +300,31 @@
             this.radioButtonIdPersona.UseVisualStyleBackColor = true;
             this.radioButtonIdPersona.CheckedChanged += new System.EventHandler(this.radioButtonIdPersona_CheckedChanged);
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Image = global::Clinica_Veterinaria.Properties.Resources.busqueda1;
+            this.button2.Location = new System.Drawing.Point(590, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 37);
+            this.button2.TabIndex = 31;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // RFa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1289, 470);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "RFa";
-            this.Text = "RFa";
+            this.Text = "Registro_Familia";
             this.Load += new System.EventHandler(this.RFa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -340,7 +332,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,7 +354,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton radioButtonIdPersona;
     }

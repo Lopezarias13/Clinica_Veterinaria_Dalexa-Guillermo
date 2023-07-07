@@ -17,13 +17,13 @@ namespace Clinica_Veterinaria.Presentaciones
         {
             InitializeComponent();
         }
-        private void FormPresentacion_Load(object sender, EventArgs e)
+
+
+        private void FormPresentacion_Load_1(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
+            timer1.Interval = 10;
             timer1.Start();
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -33,14 +33,20 @@ namespace Clinica_Veterinaria.Presentaciones
         {
             if(tiempo < 4000)
             {
-                tiempo =+ 40;
-                progressBar1.Value = +1;
+                tiempo += 40;
+                progressBar1.Value += 1;
             }
             else
             {
                 this.Close();
                 timer1.Stop();
             }
+        }
+
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
