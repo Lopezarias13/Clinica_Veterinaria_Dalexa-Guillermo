@@ -137,7 +137,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.groupBox1.Location = new System.Drawing.Point(23, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 399);
+            this.groupBox1.Size = new System.Drawing.Size(435, 419);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Familia";

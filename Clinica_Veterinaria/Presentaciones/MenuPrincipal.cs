@@ -16,5 +16,21 @@ namespace Clinica_Veterinaria.Presentaciones
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)//boton para enlazar ir a rFA
+        {
+            RFa rFa = new RFa();
+            rFa.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)//Salir del progrma
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Cerrar la aplicación
+            }
+        }
     }
 }

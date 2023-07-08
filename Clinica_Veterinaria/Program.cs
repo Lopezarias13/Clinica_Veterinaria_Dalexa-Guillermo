@@ -15,8 +15,9 @@ namespace Clinica_Veterinaria
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormPresentacion());
-            Application.Run(new RFa());
-
+            Application.Run(new MenuPrincipal());
+            //Application.Run(new RFa());
+            //Application.Run(new RegistraPersona());
         }
     }
 }

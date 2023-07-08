@@ -185,6 +185,16 @@
       <LastGenOutput>ClinicaVeterinaria.cs</LastGenOutput>
       <DependentUpon>ClinicaVeterinaria.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\veterinarian %281%29.png" />
+    <None Include="Resources\medical-history.png" />
+    <None Include="Resources\vaccine.png" />
+    <None Include="Resources\veterinarian.png" />
+    <None Include="Resources\patient.png" />
+    <None Include="Resources\family.png" />
+    <None Include="Resources\1000_F_97197793_idBy2BplXmItrKOLpGqKChm95wOofD1D1.jpg" />
+    <None Include="Resources\1000_F_97197793_idBy2BplXmItrKOLpGqKChm95wOofD1D.jpg" />
+    <None Include="Resources\veterinaria.jpg" />
+    <None Include="Resources\coqueto-diseno-de-veterinario-sin-costuras-fondo-dibujado-a-mano-de-caras-de-mascotas-y-equipo-veterinario-2dcmhj3.jpg" />
     <None Include="Resources\busqueda.ico" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
